@@ -38,13 +38,13 @@ jobs:
       run: |
         pytest --alluredir=allure-results
 
-    - name: Allure Report action from marketplace 
-      uses: simple-elf/allure-report-action@master 
-      if: always() 
-      with: 
-        allure_results: allure-results 
-        allure_history: allure-history 
-        keep_reports: 20 
+    - name: Allure Report action from marketplace
+      uses: simple-elf/allure-report-action@master
+      if: always()
+      with:
+        allure_results: allure-results
+        allure_history: allure-history
+        keep_reports: 20
 
     - name: Deploy report to Github Pages 
       if: always() 
